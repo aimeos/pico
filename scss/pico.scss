@@ -5,9 +5,6 @@
 // Config
 @forward "settings";
 
-// Theming
-@use "themes/default";
-
 // Layout
 @use "layout/document"; // html
 @use "layout/landmarks"; // body, header, main, footer
@@ -24,6 +21,9 @@
 @use "content/code"; // pre, code, ...
 @use "content/figure"; // figure, figcaption
 @use "content/misc"; // hr, template, [hidden], dialog, canvas
+
+// Theming
+@use "themes/default";
 
 @use "components/loading"; // aria-busy=true
 
