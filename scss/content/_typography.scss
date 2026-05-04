@@ -43,7 +43,7 @@
   #{$parent-selector} pre,
   #{$parent-selector} table,
   #{$parent-selector} ul {
-    margin-top: 0;
+    margin-top: var(#{$css-var-prefix}typography-spacing-vertical);
     margin-bottom: var(#{$css-var-prefix}typography-spacing-vertical);
     color: var(#{$css-var-prefix}color);
     font-style: normal;
@@ -57,7 +57,7 @@
   #{$parent-selector} h4,
   #{$parent-selector} h5,
   #{$parent-selector} h6 {
-    margin-top: 0;
+    margin-top: var(#{$css-var-prefix}typography-spacing-top);
     margin-bottom: var(#{$css-var-prefix}typography-spacing-vertical);
     color: var(#{$css-var-prefix}color);
     font-weight: var(#{$css-var-prefix}font-weight);

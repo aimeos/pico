@@ -23,7 +23,7 @@
     #{$css-var-prefix}font-family: var(#{$css-var-prefix}font-family-sans-serif);
     #{$css-var-prefix}line-height: 1.5;
     #{$css-var-prefix}font-weight: 400;
-    #{$css-var-prefix}font-size: 100%;
+    #{$css-var-prefix}font-size: 1rem;
     #{$css-var-prefix}text-underline-offset: 0.1rem;
 
     // Borders
@@ -243,38 +243,38 @@
     }
 
     h1 {
-      #{$css-var-prefix}font-size: 2rem;
-      #{$css-var-prefix}line-height: 1.125;
+      font-size: calc(var(--pico-font-size) * 2);
+      line-height: calc(var(--pico-line-height) * 0.75);
       #{$css-var-prefix}typography-spacing-top: 3rem;
     }
 
     h2 {
-      #{$css-var-prefix}font-size: 1.75rem;
-      #{$css-var-prefix}line-height: 1.15;
+      font-size: calc(var(--pico-font-size) * 1.766);
+      line-height: calc(var(--pico-line-height) * 0.766);
       #{$css-var-prefix}typography-spacing-top: 2.625rem;
     }
 
     h3 {
-      #{$css-var-prefix}font-size: 1.5rem;
-      #{$css-var-prefix}line-height: 1.175;
+      font-size: calc(var(--pico-font-size) * 1.5);
+      line-height: calc(var(--pico-line-height) * 0.783);
       #{$css-var-prefix}typography-spacing-top: 2.25rem;
     }
 
     h4 {
-      #{$css-var-prefix}font-size: 1.25rem;
-      #{$css-var-prefix}line-height: 1.2;
+      font-size: calc(var(--pico-font-size) * 1.25);
+      line-height: calc(var(--pico-line-height) * 0.8);
       #{$css-var-prefix}typography-spacing-top: 1.874rem;
     }
 
     h5 {
-      #{$css-var-prefix}font-size: 1.125rem;
-      #{$css-var-prefix}line-height: 1.225;
+      font-size: calc(var(--pico-font-size) * 1.125);
+      line-height: calc(var(--pico-line-height) * 0.816);
       #{$css-var-prefix}typography-spacing-top: 1.6875rem;
     }
 
     h6 {
-      #{$css-var-prefix}font-size: 1rem;
-      #{$css-var-prefix}line-height: 1.25;
+      font-size: calc(var(--pico-font-size) * 1);
+      line-height: calc(var(--pico-line-height) * 0.833);
       #{$css-var-prefix}typography-spacing-top: 1.5rem;
     }
   }
@@ -307,13 +307,13 @@
 
   // Inputs and Selects
   input:not(
-      [type="submit"],
-      [type="button"],
-      [type="reset"],
-      [type="checkbox"],
-      [type="radio"],
-      [type="file"]
-    ),
+    [type="submit"],
+    [type="button"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"],
+    [type="file"]
+  ),
   :where(select, textarea) {
     #{$css-var-prefix}outline-width: 0.0625rem;
   }
@@ -360,11 +360,11 @@
     [role="group"] {
       @if $enable-classes {
         &:has(
-            button.secondary:focus,
-            [type="submit"].secondary:focus,
-            [type="button"].secondary:focus,
-            [role="button"].secondary:focus
-          ) {
+          button.secondary:focus,
+          [type="submit"].secondary:focus,
+          [type="button"].secondary:focus,
+          [role="button"].secondary:focus
+        ) {
           #{$css-var-prefix}group-box-shadow-focus-with-button: 0
             0
             0
@@ -373,11 +373,11 @@
         }
 
         &:has(
-            button.contrast:focus,
-            [type="submit"].contrast:focus,
-            [type="button"].contrast:focus,
-            [role="button"].contrast:focus
-          ) {
+          button.contrast:focus,
+          [type="submit"].contrast:focus,
+          [type="button"].contrast:focus,
+          [role="button"].contrast:focus
+        ) {
           #{$css-var-prefix}group-box-shadow-focus-with-button: 0
             0
             0
