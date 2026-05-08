@@ -288,52 +288,46 @@ del {
 /**
  * Link
  */
-:where(a:not([role=button])),
-[role=link] {
-  --pico-color: var(--pico-primary);
-  --pico-background-color: transparent;
-  --pico-underline: var(--pico-primary-underline);
+a {
+  background: transparent;
+  color: var(--pico-color);
+}
+a[role=button] {
+  display: inline-block;
+}
+
+:where(a:not([role=button]):not([role=menuitem])) {
   outline: none;
   background-color: var(--pico-background-color);
-  color: var(--pico-color);
+  color: var(--pico-primary);
   text-decoration: var(--pico-text-decoration);
-  text-decoration-color: var(--pico-underline);
+  text-decoration-color: var(--pico-primary-underline);
   text-underline-offset: 0.125em;
   transition: background-color var(--pico-transition), color var(--pico-transition), text-decoration var(--pico-transition), box-shadow var(--pico-transition);
 }
-:where(a:not([role=button])):is([aria-current]:not([aria-current=false]), :hover, :active, :focus),
-[role=link]:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
-  --pico-color: var(--pico-primary-hover);
-  --pico-underline: var(--pico-primary-hover-underline);
-  --pico-text-decoration: underline;
+:where(a:not([role=button]):not([role=menuitem])):is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
+  color: var(--pico-primary-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--pico-primary-hover-underline);
 }
-:where(a:not([role=button])):focus-visible,
-[role=link]:focus-visible {
+:where(a:not([role=button]):not([role=menuitem])):focus-visible {
   box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
 }
-:where(a:not([role=button])).secondary,
-[role=link].secondary {
-  --pico-color: var(--pico-secondary);
-  --pico-underline: var(--pico-secondary-underline);
+:where(a:not([role=button]):not([role=menuitem])).secondary {
+  color: var(--pico-secondary);
+  text-decoration-color: var(--pico-secondary-underline);
 }
-:where(a:not([role=button])).secondary:is([aria-current]:not([aria-current=false]), :hover, :active, :focus),
-[role=link].secondary:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
-  --pico-color: var(--pico-secondary-hover);
-  --pico-underline: var(--pico-secondary-hover-underline);
+:where(a:not([role=button]):not([role=menuitem])).secondary:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
+  color: var(--pico-secondary-hover);
+  text-decoration-color: var(--pico-secondary-hover-underline);
 }
-:where(a:not([role=button])).contrast,
-[role=link].contrast {
-  --pico-color: var(--pico-contrast);
-  --pico-underline: var(--pico-contrast-underline);
+:where(a:not([role=button]):not([role=menuitem])).contrast {
+  color: var(--pico-contrast);
+  text-decoration-color: var(--pico-contrast-underline);
 }
-:where(a:not([role=button])).contrast:is([aria-current]:not([aria-current=false]), :hover, :active, :focus),
-[role=link].contrast:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
-  --pico-color: var(--pico-contrast-hover);
-  --pico-underline: var(--pico-contrast-hover-underline);
-}
-
-a[role=button] {
-  display: inline-block;
+:where(a:not([role=button]):not([role=menuitem])).contrast:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
+  color: var(--pico-contrast-hover);
+  text-decoration-color: var(--pico-contrast-hover-underline);
 }
 
 /**
