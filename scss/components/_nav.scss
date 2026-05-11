@@ -81,7 +81,7 @@
     }
 
     // Breadcrumb
-    &[aria-label="breadcrumb"] {
+    &.breadcrumb {
       align-items: center;
       justify-content: start;
 
@@ -147,7 +147,7 @@
   // Breadcrumb RTL
   [dir="rtl"] {
     #{$parent-selector} nav {
-      &[aria-label="breadcrumb"] {
+      &.breadcrumb {
         & ul li {
           &:not(:last-child) {
             ::after {

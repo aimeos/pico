@@ -104,25 +104,6 @@ section {
 }
 
 /**
- * Grid
- * Minimal grid system with auto-layout columns
- */
-.grid {
-  grid-column-gap: var(--pico-grid-column-gap);
-  grid-row-gap: var(--pico-grid-row-gap);
-  display: grid;
-  grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
-  }
-}
-.grid > * {
-  min-width: 0;
-}
-
-/**
  * Overflow auto
  */
 .overflow-auto {
@@ -331,38 +312,6 @@ a[role=button] {
 }
 
 /**
- * Table
- */
-:where(table) {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  text-indent: 0;
-}
-
-th,
-td {
-  padding: calc(var(--pico-spacing) / 2) var(--pico-spacing);
-  border-bottom: var(--pico-border-width) solid var(--pico-table-border-color);
-  background-color: var(--pico-background-color);
-  color: var(--pico-color);
-  font-weight: var(--pico-font-weight);
-  text-align: left;
-  text-align: start;
-}
-
-tfoot th,
-tfoot td {
-  border-top: var(--pico-border-width) solid var(--pico-table-border-color);
-  border-bottom: 0;
-}
-
-table.striped tbody tr:nth-child(odd) th,
-table.striped tbody tr:nth-child(odd) td {
-  background-color: var(--pico-table-row-stripped-background-color);
-}
-
-/**
  * Embedded content
  */
 :where(audio, canvas, iframe, img, svg, video) {
@@ -396,78 +345,6 @@ img {
 svg:not(:root),
 svg:not(:host) {
   overflow: hidden;
-}
-
-/**
- * Code
- */
-pre,
-code,
-kbd,
-samp {
-  font-size: 0.875em;
-  font-family: var(--pico-font-family);
-}
-
-pre code,
-pre samp {
-  font-size: inherit;
-  font-family: inherit;
-}
-
-pre {
-  -ms-overflow-style: scrollbar;
-  overflow: auto;
-}
-
-pre,
-code,
-kbd,
-samp {
-  border-radius: var(--pico-border-radius);
-  background: var(--pico-code-background-color);
-  color: var(--pico-code-color);
-  font-weight: var(--pico-font-weight);
-  line-height: initial;
-}
-
-code,
-kbd,
-samp {
-  display: inline-block;
-  padding: 0.375rem;
-}
-
-pre {
-  display: block;
-  margin-bottom: var(--pico-spacing);
-  overflow-x: auto;
-}
-pre > code,
-pre > samp {
-  display: block;
-  padding: var(--pico-spacing);
-  background: none;
-  line-height: var(--pico-line-height);
-}
-
-kbd {
-  background-color: var(--pico-code-kbd-background-color);
-  color: var(--pico-code-kbd-color);
-  vertical-align: baseline;
-}
-
-/**
- * Figure
- */
-figure {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-figure figcaption {
-  padding: calc(var(--pico-spacing) * 0.5) 0;
-  color: var(--pico-muted-color);
 }
 
 /**
@@ -536,31 +413,31 @@ canvas {
 @media (min-width: 576px) {
   :root,
   :host {
-    --pico-font-size: 1.0625rem;
+    --pico-font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
   :root,
   :host {
-    --pico-font-size: 1.125rem;
+    --pico-font-size: 1.0625rem;
   }
 }
 @media (min-width: 1024px) {
   :root,
   :host {
-    --pico-font-size: 1.1875rem;
+    --pico-font-size: 1.125rem;
   }
 }
 @media (min-width: 1280px) {
   :root,
   :host {
-    --pico-font-size: 1.25rem;
+    --pico-font-size: 1.1875rem;
   }
 }
 @media (min-width: 1536px) {
   :root,
   :host {
-    --pico-font-size: 1.3125rem;
+    --pico-font-size: 1.25rem;
   }
 }
 

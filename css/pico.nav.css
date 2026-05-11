@@ -61,18 +61,18 @@ nav li select {
   margin-left: inherit;
   padding: calc(var(--pico-nav-link-spacing-vertical) - var(--pico-border-width) * 2) var(--pico-nav-link-spacing-horizontal);
 }
-nav[aria-label=breadcrumb] {
+nav.breadcrumb {
   align-items: center;
   justify-content: start;
 }
-nav[aria-label=breadcrumb] ul li:not(:first-child) {
+nav.breadcrumb ul li:not(:first-child) {
   margin-inline-start: var(--pico-nav-link-spacing-horizontal);
 }
-nav[aria-label=breadcrumb] ul li a {
+nav.breadcrumb ul li a {
   margin: calc(var(--pico-nav-link-spacing-vertical) * -1) 0;
   margin-inline-start: calc(var(--pico-nav-link-spacing-horizontal) * -1);
 }
-nav[aria-label=breadcrumb] ul li:not(:last-child)::after {
+nav.breadcrumb ul li:not(:last-child)::after {
   display: inline-block;
   position: absolute;
   width: calc(var(--pico-nav-link-spacing-horizontal) * 4);
@@ -83,7 +83,7 @@ nav[aria-label=breadcrumb] ul li:not(:last-child)::after {
   text-decoration: none;
   white-space: nowrap;
 }
-nav[aria-label=breadcrumb] a[aria-current]:not([aria-current=false]) {
+nav.breadcrumb a[aria-current]:not([aria-current=false]) {
   background-color: transparent;
   color: inherit;
   text-decoration: none;
@@ -106,6 +106,6 @@ aside li [role=button] {
   margin: inherit;
 }
 
-[dir=rtl] nav[aria-label=breadcrumb] ul li:not(:last-child) ::after {
+[dir=rtl] nav.breadcrumb ul li:not(:last-child) ::after {
   content: "\\";
 }

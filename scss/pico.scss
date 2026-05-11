@@ -10,16 +10,12 @@
 @use "layout/landmarks"; // body, header, main, footer
 @use "layout/section"; // section
 @use "layout/container"; // .container, .container-fluid
-@use "layout/grid"; // .grid
 @use "layout/overflow-auto"; // .overflow-auto
 
 // Content
 @use "content/typography"; // headings, p, ul, blockquote, ...
 @use "content/link"; // a, role="link"
-@use "content/table"; // table, tr, td, ...
 @use "content/embedded"; // audio, canvas, iframe, img, svg, video
-@use "content/code"; // pre, code, ...
-@use "content/figure"; // figure, figcaption
 @use "content/misc"; // hr, template, [hidden], dialog, canvas
 
 // Theming
